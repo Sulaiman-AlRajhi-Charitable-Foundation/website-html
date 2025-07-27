@@ -5,6 +5,31 @@ $(window).on("load", function () {
   }, 1000);
 });
 $(document).ready(function () {
+  /************************************ Side Menu ************************************/
+  if ($(window).width() <= 1229) {
+    $(".menu-icon").click(function () {
+      $(".header-nav").addClass("active");
+      $("body").addClass("overflow");
+      $(".overlay").fadeIn();
+    });
+    $(".close-menu,.overlay").click(function () {
+      $(".header-nav").removeClass("active");
+      $("body").removeClass("overflow");
+      $(".overlay").fadeOut();
+    });
+    $(".has-children .nav-link").click(function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      $(".has-children .nav-link").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      if ($(this).siblings().css("display") == "none") {
+        $(this).siblings().slideDown(500);
+      } else {
+        $(this).siblings().slideUp(500);
+      }
+      $(".has-children .nav-link").not(this).siblings().slideUp(500);
+    });
+  }
   /************************************ Main Slider ************************************/
   var mainSwiper = new Swiper(".main-slider .swiper", {
     spaceBetween: 20,
@@ -77,7 +102,6 @@ $(document).ready(function () {
 
   /************************************ Map ************************************/
   $(document).on("mouseenter", ".custom-loc", function (e) {
-    console.log(e);
     $(".custom-loc").removeClass("active");
     $(".map-statistics").hide();
     $(".custom-tooltip").remove();
