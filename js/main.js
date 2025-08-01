@@ -64,6 +64,23 @@ $(document).ready(function () {
     slidesPerView: "auto",
     loop: true,
   });
+  /************************************ Priorities Slider ************************************/
+  var prioritiesSwiper = new Swiper(".priorities-slider .swiper", {
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    loop: true,
+    pagination: {
+      el: ".priorities-section .swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".priorities-section .swiper-btn-next",
+      prevEl: ".priorities-section .swiper-btn-prev",
+    },
+  });
+  $(".priorities-item").click(function () {
+    $(this).toggleClass("active");
+  });
   /************************************ Knowledge Center Slider ************************************/
   var knowledge_centerSwiper = new Swiper(".knowledge_center-slider .swiper", {
     spaceBetween: 20,
