@@ -7,6 +7,7 @@ $(window).on("load", function () {
 $(document).ready(function () {
   /************************************ Side Menu ************************************/
   if ($(window).width() <= 1229) {
+    $(".has-children .nav-link.active").siblings().show();
     $(".menu-icon").click(function () {
       $(".header-nav").addClass("active");
       $("body").addClass("overflow");
@@ -87,6 +88,24 @@ $(document).ready(function () {
     slidesPerView: "auto",
     loop: true,
   });
+
+  /************************************ Timeline Slider ************************************/
+  if ($(window).width() > 1229) {
+    var timelineSwiper = new Swiper(".timeline-slider .swiper", {
+      spaceBetween: 40,
+      slidesPerView: "auto",
+      pagination: {
+        el: ".timeline-slider .timeline-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          var title = this.slides[index].getAttribute("data-title");
+          return (
+            '<div class="' + className + '"><span>' + title + "</span></div>"
+          );
+        },
+      },
+    });
+  }
   /************************************ Statistics ************************************/
   if ($(".statistics-section").length) {
     var a = 0;

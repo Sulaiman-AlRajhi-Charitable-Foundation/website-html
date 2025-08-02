@@ -2798,11 +2798,13 @@ html[dir=rtl] .lonely-caption::after, html[lang=ar] .lonely-caption::after, html
   }
   .header-nav .children-item {
     width: 100%;
+    margin-bottom: 15px;
   }
   .header-nav .children-item h4 {
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     padding: 0;
-    margin: 0 0 10px;
+    margin: 0 0 5px;
   }
   .header-nav .children-menu {
     padding: 0 15px;
@@ -3791,4 +3793,278 @@ html[dir=rtl] .newsletter-input::placeholder, html[lang=ar] .newsletter-input::p
 .goals-flex .goals {
   flex: 1;
   min-width: calc(100% / var(--count) - var(--gap) * (var(--count) - 1) / var(--count));
+}
+
+.history-page {
+  overflow: hidden;
+}
+@media (min-width: 1330px) {
+  .history-page .container {
+    max-width: 1324px;
+  }
+}
+
+.history-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 0;
+}
+.history-main .history-info :last-child {
+  margin-bottom: 0;
+}
+.history-main .history-body {
+  font-size: 20px;
+  font-weight: 500;
+  color: #656565;
+  line-height: 1.5;
+  position: relative;
+  margin: 0 0 80px;
+}
+@media (max-width: 991px) {
+  .history-main .history-body {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+.history-main .history-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 50%;
+  max-width: 600px;
+  aspect-ratio: 600/450;
+  overflow: hidden;
+  border-radius: 24px;
+}
+@media (max-width: 991px) {
+  .history-main .history-img {
+    aspect-ratio: 361/271;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .history-main {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .history-main .section-head {
+    margin-bottom: 12px;
+  }
+}
+
+.timeline-content {
+  padding: 160px 0;
+}
+.timeline-content .section-head {
+  display: none;
+  margin: 0 0 40px;
+}
+@media (max-width: 1229px) {
+  .timeline-content .section-head {
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  .timeline-content {
+    padding: 0 0;
+  }
+}
+
+.timeline-slider .swiper {
+  overflow: unset;
+}
+@media (max-width: 1229px) {
+  .timeline-slider .swiper-wrapper {
+    flex-direction: column;
+    gap: 40px 20px;
+  }
+}
+@media (max-width: 991px) {
+  .timeline-slider .swiper-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .timeline-slider .swiper-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.timeline-slider .swiper-slide {
+  width: calc(100% - 48px);
+}
+@media (max-width: 1229px) {
+  .timeline-slider .swiper-slide {
+    width: 100%;
+  }
+}
+.timeline-slider .timeline-pagination {
+  position: relative;
+  inset: unset;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 1329px) {
+  .timeline-slider .timeline-pagination {
+    gap: 5px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1229px) {
+  .timeline-slider .timeline-pagination {
+    display: none;
+  }
+}
+.timeline-slider .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin: 0;
+}
+.timeline-slider .swiper-pagination-bullet span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #292929;
+  background-color: #fff;
+  padding: 0 15px;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+.timeline-slider .swiper-pagination-bullet:after {
+  content: "";
+  width: 30px;
+  background-color: #292929;
+  height: 1px;
+  margin: 0 3px;
+}
+@media (max-width: 1329px) {
+  .timeline-slider .swiper-pagination-bullet:after {
+    display: none;
+  }
+}
+.timeline-slider .swiper-pagination-bullet:last-of-type:after {
+  display: none;
+}
+.timeline-slider .swiper-pagination-bullet.swiper-pagination-bullet-active span {
+  background-color: #f1f7fe;
+}
+.timeline-slider .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-of-type(even) span {
+  background-color: #f3eace;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: #f1f7fe;
+  border-radius: 24px;
+  overflow: hidden;
+}
+@media (max-width: 1229px) {
+  .timeline-item {
+    gap: 0;
+  }
+}
+@media (max-width: 991px) {
+  .timeline-item {
+    width: 100%;
+    max-width: 361px;
+    flex-direction: column-reverse;
+    border-radius: 16px;
+    height: 100%;
+    justify-content: start;
+    margin: 0 auto;
+  }
+}
+.timeline-item .timeline-info {
+  width: 100%;
+  padding: 20px 50px;
+}
+.timeline-item .timeline-info :last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .timeline-item .timeline-info {
+    padding: 16px;
+  }
+}
+.timeline-item .label {
+  height: 56px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #292929;
+  background-color: #fff;
+  padding: 0 15px;
+  margin: 0 0 32px;
+}
+.timeline-item .title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #0b2546;
+  line-height: 1.5;
+  margin: 0 0 32px;
+}
+@media (max-width: 1229px) {
+  .timeline-item .title {
+    font-size: 20px;
+  }
+}
+.timeline-item .desc {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #656565;
+  margin: 0;
+}
+.timeline-item .desc * {
+  line-height: 1.5;
+}
+.timeline-item .desc ul {
+  list-style: disc;
+  padding-inline-start: 20px;
+}
+@media (max-width: 1229px) {
+  .timeline-item .desc {
+    font-size: 16px;
+  }
+}
+.timeline-item .timeline-img {
+  width: 50%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+}
+@media (max-width: 991px) {
+  .timeline-item .timeline-img {
+    width: 100%;
+    max-width: unset;
+    aspect-ratio: 361/200;
+    overflow: hidden;
+  }
+}
+.swiper-slide:nth-of-type(even) .timeline-item {
+  background-color: #f3eace;
 }/*# sourceMappingURL=main.css.map */
