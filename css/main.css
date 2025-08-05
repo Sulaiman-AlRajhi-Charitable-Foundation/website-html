@@ -4277,6 +4277,34 @@ html[dir=rtl] .newsletter-input::placeholder, html[lang=ar] .newsletter-input::p
   }
 }
 
+.areas-nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.areas-nav-tabs button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 16px;
+  height: 42px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #656565;
+  background-color: #bdbdbd;
+  transition: all 0.3s ease-in-out;
+}
+.areas-nav-tabs button.active {
+  background-color: #1882df;
+  color: #fff;
+}
+
 .council-page {
   overflow: hidden;
 }
