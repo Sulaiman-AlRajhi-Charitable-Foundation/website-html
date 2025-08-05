@@ -161,4 +161,18 @@ $(document).ready(function () {
     });
     item.show();
   });
+
+  /************************************ Filters ************************************/
+  if ($(window).width() <= 991) {
+    $(".filters-btn").click(function () {
+      $(".reports-filters").fadeIn();
+      $("body").addClass("overflow");
+      $(".filters-overlay").fadeIn();
+    });
+    $(".filters-overlay").click(function () {
+      $(".reports-filters").fadeOut();
+      $("body").removeClass("overflow");
+      $(".filters-overlay").fadeOut();
+    });
+  }
 });
