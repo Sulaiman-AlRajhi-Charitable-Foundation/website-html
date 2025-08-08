@@ -175,4 +175,42 @@ $(document).ready(function () {
       $(".filters-overlay").fadeOut();
     });
   }
+
+  /************************************ Program Endowment ************************************/
+  if ($(window).width() > 991) {
+    var endowmentThumbs = new Swiper(".endowment-thumb .swiper", {
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      watchSlidesProgress: true,
+    });
+    var endowmentSlider = new Swiper(".endowment-slider .swiper", {
+      spaceBetween: 10,
+      allowTouchMove: false,
+      simulateTouch: false,
+      effect: "fade",
+      speed: 0,
+      thumbs: {
+        swiper: endowmentThumbs,
+      },
+    });
+  } else {
+    $(".endowment_types-item").click(function () {
+      $(this).find(".type-title").toggleClass("active");
+      $(this).find(".content").slideToggle();
+    });
+  }
+  /************************************ Program Gallery ************************************/
+  var programsSwiper = new Swiper(".gallery-slider .swiper", {
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    loop: true,
+    pagination: {
+      el: ".program-gallery .swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".program-gallery .swiper-btn-next",
+      prevEl: ".program-gallery .swiper-btn-prev",
+    },
+  });
 });
