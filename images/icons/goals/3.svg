@@ -1,0 +1,23 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 21H21" stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M14.01 20.9898L2.01001 21.0099L2 6.06986C2 5.39986 2.34001 4.77983 2.89001 4.40983L6.89001 1.73984C7.56001 1.28984 8.43999 1.28984 9.10999 1.73984L13.11 4.40983C13.67 4.77983 14 5.39986 14 6.06986L14.01 20.9898Z"
+        stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <path d="M18.9805 21.01V17" stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M19 11C17.9 11 17 11.9 17 13V15C17 16.1 17.9 17 19 17C20.1 17 21 16.1 21 15V13C21 11.9 20.1 11 19 11Z"
+        stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <path d="M2 13H14" stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M8 21V17.25" stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M8 9.5C8.82843 9.5 9.5 8.82843 9.5 8C9.5 7.17157 8.82843 6.5 8 6.5C7.17157 6.5 6.5 7.17157 6.5 8C6.5 8.82843 7.17157 9.5 8 9.5Z"
+        stroke="#0A5EB0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        stroke-linejoin="round" />
+</svg>
+    
