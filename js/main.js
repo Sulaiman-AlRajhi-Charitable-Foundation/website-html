@@ -164,7 +164,9 @@ $(document).ready(function () {
 
   /************************************ Filters ************************************/
   if ($(window).width() <= 991) {
-    $(".filters-btn").click(function () {
+    $(".filters-btn").click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
       $(".reports-filters").fadeIn();
       $("body").addClass("overflow");
       $(".filters-overlay").fadeIn();
