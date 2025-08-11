@@ -167,12 +167,12 @@ $(document).ready(function () {
     $(".filters-btn").click(function (e) {
       e.preventDefault();
       e.stopPropagation();
-      $(".reports-filters").fadeIn();
+      $(".reports-filters,.archive-filters").fadeIn();
       $("body").addClass("overflow");
       $(".filters-overlay").fadeIn();
     });
     $(".filters-overlay").click(function () {
-      $(".reports-filters").fadeOut();
+      $(".reports-filters,.archive-filters").fadeOut();
       $("body").removeClass("overflow");
       $(".filters-overlay").fadeOut();
     });
