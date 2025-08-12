@@ -215,4 +215,31 @@ $(document).ready(function () {
       prevEl: ".program-gallery .swiper-btn-prev",
     },
   });
+
+  /************************************ form Wizard ************************************/
+  if ($("#volunteeringForm").length > 0) {
+    window.volunteeringForm = new Stepper(
+      document.querySelector("#volunteeringForm"),
+      {
+        linear: false,
+        animation: true,
+      }
+    );
+  }
+  $(".btnNext").click(function () {
+    const nextTabLinkEl = $(".account-tabs .active").next("button")[0];
+    const nextTab = new bootstrap.Tab(nextTabLinkEl);
+    nextTab.show();
+  });
+
+  $(".file-content input[type=file]").change(function () {
+    let file_val;
+    let placeholder = $(this).attr("placeholder");
+    if ($(this).val() == "") {
+      file_val = placeholder;
+    } else {
+      file_val = $(this).prop("files")[0].name;
+    }
+    $(this).next().find(".file-name").html(file_val);
+  });
 });
