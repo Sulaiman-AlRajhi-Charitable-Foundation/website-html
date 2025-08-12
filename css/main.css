@@ -2498,55 +2498,54 @@ html[dir=rtl] .about-statistic:last-of-type::after, html[lang=ar] .about-statist
   }
 }
 
-.map-content {
+.map-section .map-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 80px;
 }
 @media (max-width: 1229px) {
-  .map-content {
+  .map-section .map-content {
     gap: 16px;
   }
 }
 @media (max-width: 991px) {
-  .map-content {
+  .map-section .map-content {
     flex-direction: column;
     width: 100%;
     max-width: 626px;
+    height: auto;
     margin: 0 auto;
   }
 }
-
-.map-figure {
+.map-section .map-figure {
   width: 50%;
   max-width: 626px;
   aspect-ratio: 626/542;
   flex-shrink: 0;
   position: relative;
 }
-.map-figure .custom-loc {
+.map-section .map-figure .custom-loc {
   fill: #dcdcdc;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.map-figure .custom-loc:hover, .map-figure .custom-loc.active {
+.map-section .map-figure .custom-loc:hover, .map-section .map-figure .custom-loc.active {
   fill: #0a519a;
 }
 @media (max-width: 991px) {
-  .map-figure {
+  .map-section .map-figure {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 767px) {
-  .map-figure {
+  .map-section .map-figure {
     max-width: 343px;
   }
 }
-
-.custom-tooltip {
+.map-section .custom-tooltip {
   position: absolute;
   transform: translateX(50%);
   background-color: #d19b3e;
@@ -2561,12 +2560,11 @@ html[dir=rtl] .about-statistic:last-of-type::after, html[lang=ar] .about-statist
   align-items: center;
   justify-content: center;
 }
-
-.map-info {
+.map-section .map-info {
   width: 100%;
 }
 @media (max-width: 991px) {
-  .map-info {
+  .map-section .map-info {
     width: 100%;
     max-width: 360px;
     height: 244px;
@@ -2575,12 +2573,11 @@ html[dir=rtl] .about-statistic:last-of-type::after, html[lang=ar] .about-statist
     position: relative;
   }
 }
-
-.map-statistics {
+.map-section .map-statistics {
   display: none;
 }
 @media (max-width: 991px) {
-  .map-statistics {
+  .map-section .map-statistics {
     position: absolute;
     top: 0;
     left: 0;
@@ -2588,14 +2585,12 @@ html[dir=rtl] .about-statistic:last-of-type::after, html[lang=ar] .about-statist
     height: 100%;
   }
 }
-
-.statistics-grid {
+.map-section .statistics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 16px;
 }
-
-.map-statistic {
+.map-section .map-statistic {
   width: 100%;
   height: 185px;
   display: flex;
@@ -2606,27 +2601,27 @@ html[dir=rtl] .about-statistic:last-of-type::after, html[lang=ar] .about-statist
   background-color: #e1eefd;
   border-radius: 16px;
 }
-.map-statistic .value {
+.map-section .map-statistic .value {
   font-size: 36px;
   font-weight: 700;
   color: #0b2546;
   line-height: 1.5;
   margin: 0;
 }
-.map-statistic .title {
+.map-section .map-statistic .title {
   font-size: 24px;
   color: #656565;
   line-height: 1.5;
 }
 @media (max-width: 1229px) {
-  .map-statistic {
+  .map-section .map-statistic {
     height: auto;
   }
-  .map-statistic .value {
+  .map-section .map-statistic .value {
     font-size: 24px;
     font-weight: 500;
   }
-  .map-statistic .title {
+  .map-section .map-statistic .title {
     font-size: 16px;
   }
 }
