@@ -242,4 +242,12 @@ $(document).ready(function () {
     }
     $(this).next().find(".file-name").html(file_val);
   });
+
+  /************************************ Program Endowment ************************************/
+  if ($(window).width() < 992) {
+    $(document).on("click", ".download-title", function () {
+      $(this).toggleClass("active").siblings().slideToggle();
+    });
+    $(".download-title").click();
+  }
 });
