@@ -80,6 +80,7 @@ $(document).ready(function () {
     },
   });
   $(".priorities-item").click(function () {
+    $(".priorities-item").removeClass("active");
     $(this).toggleClass("active");
   });
   /************************************ Knowledge Center Slider ************************************/
@@ -244,10 +245,8 @@ $(document).ready(function () {
   });
 
   /************************************ Program Endowment ************************************/
-  if ($(window).width() < 992) {
-    $(document).on("click", ".download-title", function () {
-      $(this).toggleClass("active").siblings().slideToggle();
-    });
-    $(".download-title").click();
-  }
+  $(document).on("click", ".download-title", function () {
+    $(this).toggleClass("active").siblings().slideToggle();
+  });
+  $(".download-title").click();
 });
