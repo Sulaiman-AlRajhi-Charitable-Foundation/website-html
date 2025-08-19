@@ -31,6 +31,16 @@ $(document).ready(function () {
       $(".has-children .nav-link").not(this).siblings().slideUp(500);
     });
   }
+
+  /************************************ Search ************************************/
+  $(".header-icon.search-icon").on("click", function (e) {
+    $("body").addClass("overflow");
+    $(".search-overlay,.float_search-form").fadeIn(400);
+  });
+  $(".search-overlay").on("click", function (e) {
+    $("body").removeClass("overflow");
+    $(".search-overlay,.float_search-form").fadeOut(400);
+  });
   /************************************ Main Slider ************************************/
   var mainSwiper = new Swiper(".main-slider .swiper", {
     spaceBetween: 20,
@@ -249,4 +259,17 @@ $(document).ready(function () {
     $(this).toggleClass("active").siblings().slideToggle();
   });
   $(".download-title").click();
+
+  /************************************ Radios Select ************************************/
+  $(document).on("click", ".radio-contents .radio-label", function () {
+    $(this).toggleClass("active").siblings().slideToggle();
+  });
+  $(".radio-contents input[type=radio]").change(function () {
+    if ($(this).is(":checked")) {
+      $(this)
+        .parents(".radio-contents")
+        .find(".radio-label")
+        .html($(this).siblings(".text").html());
+    }
+  });
 });
