@@ -187,6 +187,12 @@ $(document).ready(function () {
       $("body").removeClass("overflow");
       $(".filters-overlay").fadeOut();
     });
+  } else {
+    $(".archive-tools .filters-title").click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).siblings().slideToggle();
+    });
   }
 
   /************************************ Program Endowment ************************************/

@@ -7298,6 +7298,38 @@ html[dir=rtl] .thumb-content::after, html[lang=ar] .thumb-content::after, html[d
   }
 }
 
+@media (min-width: 992px) {
+  .archive-tools .archive-filters {
+    width: 200px;
+    padding: 0;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .archive-tools .filters-title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .archive-tools .filters-title::after {
+    content: "\f107";
+    color: #fff;
+    font-family: "Font Awesome 6 pro";
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .archive-tools .filters-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 6;
+    border-radius: 6px;
+    display: none;
+  }
+}
+
 @media (min-width: 1330px) {
   .article-page .container {
     max-width: 1288px;
